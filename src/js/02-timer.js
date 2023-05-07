@@ -9,7 +9,6 @@ const daysEl = document.querySelector('span[data-days]');
 const hoursEl = document.querySelector('span[data-hours]');
 const minutesEl = document.querySelector('span[data-minutes]');
 const secondsEl = document.querySelector('span[data-seconds]');
-// console.dir(buttonEl)
 buttonEl.classList.add('disabled');
 let userDate = null;
 
@@ -36,9 +35,6 @@ function convertMs(ms) {
     return { days, hours, minutes, seconds };
 }
 
-//   console.log(convertMs(2000)); // {days: 0, hours: 0, minutes: 0, seconds: 2}
-//   console.log(convertMs(140000)); // {days: 0, hours: 0, minutes: 2, seconds: 20}
-//   console.log(convertMs(24140000)); // {days: 0, hours: 6 minutes: 42, seconds: 20}
 
 
 const options = {

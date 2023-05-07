@@ -3,7 +3,6 @@ const stopBtn = document.querySelector('button[data-stop]');
 const body = document.querySelector('body');
 
 let timerId = null;
-// let isActiv = false;
 const INTERVAL_DURATION = 1000;
 startBtn.disabled = false;
 stopBtn.disabled = true;
@@ -20,11 +19,7 @@ startBtn.addEventListener('click', onStartBtnClick);
 
 function onStartBtnClick(){
     console.log(`Call onStartBtnClick every ${INTERVAL_DURATION} ms`)
-    // if (isActiv) {
-    //     return;
-    // }
-    // isActiv = true;
-    timerId = setInterval(updateBodyBgColor, INTERVAL_DURATION);
+      timerId = setInterval(updateBodyBgColor, INTERVAL_DURATION);
     startBtn.disabled = true;
     stopBtn.disabled = false;
 };
@@ -32,7 +27,6 @@ function onStartBtnClick(){
 stopBtn.addEventListener('click', onStopBtnClick);
 
 function onStopBtnClick(){
-    // isActiv = false;
     startBtn.disabled = false;
     stopBtn.disabled = true;
     clearInterval(timerId);
