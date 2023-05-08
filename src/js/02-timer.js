@@ -70,10 +70,7 @@ class Timer  {
         const deltaTime = userDate - currentTime;
         const components = convertMs(deltaTime);
 
-                secondsEl.textContent = components.seconds;
-                minutesEl.textContent = components.minutes;
-                hoursEl.textContent = components.hours;
-                daysEl.textContent = components.days;
+        textComponents();
                 if (deltaTime <= 0) {
                     this.timerStop();
                     timerDiv.innerHTML = "Time is over!";
@@ -85,7 +82,12 @@ class Timer  {
         clearInterval(this.timerId);
     }
 }
-
+function textComponents() { 
+    secondsEl.textContent = components.seconds;
+                minutesEl.textContent = components.minutes;
+                hoursEl.textContent = components.hours;
+                daysEl.textContent = components.days;
+};
     const timer = new Timer();
     flatpickr(inputEl, options);
     buttonEl.addEventListener('click', () => timer.timerStart());
