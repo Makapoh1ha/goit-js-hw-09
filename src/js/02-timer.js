@@ -73,7 +73,7 @@ class Timer  {
         textComponents();
                 if (deltaTime <= 0) {
                     this.timerStop();
-                    timerDiv.innerHTML = "Time is over!";
+                    timeOver();
                 } 
     }, 1000)
 
@@ -87,6 +87,9 @@ function textComponents() {
                 minutesEl.textContent = components.minutes;
                 hoursEl.textContent = components.hours;
                 daysEl.textContent = components.days;
+};
+function timeOver() { 
+timerDiv.innerHTML = "Time is over!";
 };
     const timer = new Timer();
     flatpickr(inputEl, options);
